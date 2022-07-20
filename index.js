@@ -3,7 +3,7 @@ const image = document.querySelector('img');
 
 function handleUpdate() {
   const suffix = this.dataset.sizing || "";
-  console.log(this.value + suffix);
+  document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
 }
 
 inputs.forEach(input => input.addEventListener("input", handleUpdate));
